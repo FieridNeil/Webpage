@@ -1,0 +1,26 @@
+body{
+  background-color: black;
+  background-image: url("../assets/top_bg.jpg"), url("../assets/bottom_bg.jpg");
+  background-repeat: repeat-x, repeat-x;
+  background-attachment: fixed, fixed;
+  background-position: top left, bottom right;
+}
+
+#wrapper{
+  width: 600px;
+  height: 150px;
+  margin: auto;
+  border: 2px dotted green;
+  border-radius: 25px;
+  position: relative;
+  top: 250px;
+}
+
+h1{
+  color: burlywood;
+  text-align: center;
+}
+
+a{
+  margin: 15%;  
+}

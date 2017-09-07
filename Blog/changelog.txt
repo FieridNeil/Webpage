@@ -1,0 +1,27 @@
+Ver. 0
+Date: 3/7/17
+-Finished CRUD operations on posts
+-Able to create new posts
+-Able to view posts
+-Able to delete posts
+-Able to edit posts
+-Added a js script to show/hide add new category functionality while creating new posts
+
+Date: 3/9/17
+-Finished CRUD operations on categories
+-Able to view all categories with + New Category hidden as it is one of the default category.  The other default category is Uncategorized.
+-Able to delete categories
+-Able to rename categories
+-Able to add new categories
+
+Date: 3/12/17
+-New index page was made
+-Added global vars page to store all global information that shared among multiple pages.
+
+Date: 3/17/17
+-Styled index page
+-Able to choose different category or add new category while editing posts
+-Paging for view_posts.php
+-Shorten the content in view_posts.php of each post to the first 100 words
+-New page view_entry.php added to display a full entry
+-Able to delete or edit currently viewed entry in view_entry.php
