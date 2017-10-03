@@ -2,7 +2,7 @@
     
     $db_host = "localhost";
     $db_user = "root";
-    $db_pass = "hoanghiepp";
+    $db_pass = 1234;
     $db_name = "journal";
     
     // Create connection
