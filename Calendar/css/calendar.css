@@ -6,7 +6,7 @@ ul#calendar{
   list-style: none;
 }
 
-#flex-item {
+.date {
   float: left;
 
   background: tomato;
@@ -21,7 +21,7 @@ ul#calendar{
   text-align: center;
 }
 
-#flex-item1 {
+.not_date {
   float: left;
 
   background: #ccc;
@@ -36,7 +36,7 @@ ul#calendar{
   text-align: center;
 }
 
-#day {
+.day {
   float: left;
 
   background: #7d9b66;

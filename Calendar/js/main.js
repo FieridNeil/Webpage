@@ -1,27 +1,42 @@
 var month = new Date().getMonth() + 1; // Month used based 0 so month 0 = jan
-console.log(month);
+
 var year = new Date().getFullYear();
-console.log(year);
+
 
 var c =  new Calendar(month, year);
 
 c.ShowDays();
 c.ShowDates();
 
-var next = document.getElementById('next_month').addEventListener('click', GetNextMonth);
+
+var next_month = document.getElementById('next_month');
+next_month.addEventListener('click', GetNextMonth);
 
 function GetNextMonth(){
-  month += 1;
-  var c =  new Calendar(month, year);
-
-  c.ShowDays();
+  c.RemoveDates();
+  month++;
+  c =  new Calendar(month, year);
   c.ShowDates();
 }
 
+
+var prev_month = document.getElementById('prev_month');
+prev_month.addEventListener('click', GetPrevMonth);
+
+function GetPrevMonth(){
+  c.RemoveDates();
+  month--;
+  c =  new Calendar(month, year);
+  c.ShowDates();
+}
+
+
+
 // Add click event delegate to each date in the calendar
-document.getElementById('calendar').addEventListener('click',
+//childNodes returns a list of child and childnodes[1] returns the ul which is what we want
+document.getElementById('calendar_body').childNodes[1].addEventListener('click',
 function(e){
-  if(e.target && e.target.matches("li#flex-item")){
+  if(e.target && e.target.matches("li.date")){
     console.log("date is clicked");
   }
 });
