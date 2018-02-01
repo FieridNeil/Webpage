@@ -1,0 +1,52 @@
+* {margin: 0; padding: 0;}
+
+ul#calendar{
+  width: 960px;
+  height: auto;
+  list-style: none;
+}
+
+#flex-item {
+  float: left;
+
+  background: tomato;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+#flex-item1 {
+  float: left;
+
+  background: #ccc;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+#day {
+  float: left;
+
+  background: #7d9b66;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
