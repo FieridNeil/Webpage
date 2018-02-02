@@ -1,20 +1,34 @@
-* {margin: 0; padding: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
 
-ul#calendar{
+#calendar {
   width: 960px;
   height: auto;
   list-style: none;
 }
 
+.day {
+  float: left;
+  background: rgb(27, 94, 196);
+  padding: 5px;
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
 .date {
   float: left;
-
   background: tomato;
   padding: 5px;
   width: 100px;
   height: 100px;
   margin: 10px;
-
   color: white;
   font-weight: bold;
   font-size: 3em;
@@ -23,30 +37,70 @@ ul#calendar{
 
 .not_date {
   float: left;
-
-  background: #ccc;
+  background: rgba(136, 136, 136, 0.2);
   padding: 5px;
   width: 100px;
   height: 100px;
   margin: 10px;
-
   color: white;
   font-weight: bold;
   font-size: 3em;
   text-align: center;
 }
 
-.day {
+
+/* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: 0px; opacity: 0}
+    to {top: 300px; opacity: 1}
+}
+
+/* The Close Button */
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+
+div#test{
   float: left;
-
-  background: #7d9b66;
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
+  background-image: url("../assets/calendar.png");
+  width: 300px;
+  height: 400px;
 }
