@@ -1,5 +1,7 @@
 class Calendar {
-  constructor(month, year) {
+
+  constructor(date, month, year) {
+    this.date = date;
     this.month = month;
     this.year = year;
   }
@@ -38,7 +40,11 @@ class Calendar {
       if (new Date(this.year, this.month - 1, 1).getDay() - i > 0) {
         li.className = "not_date";
         var node = document.createTextNode("");
-      } else {
+      } else if(day == this.date){
+        li.className = "today";
+        var node = document.createTextNode(day);
+        day++;
+      }else {
         li.className = "date";
         var node = document.createTextNode(day);
         day++;
@@ -59,11 +65,17 @@ class Calendar {
     }
   }
 
+  // Remove current month to generate new month
   RemoveDates() {
     var container = document.getElementById('calendar_body');
     container.removeChild(container.childNodes[1]);
   }
 
+
+  // Return today's date
+  Today(){
+    
+  }
 
   CreateEvent(){
 

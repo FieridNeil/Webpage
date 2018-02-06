@@ -1,8 +1,12 @@
+var date = new Date().getDate();
 var month = new Date().getMonth() + 1; // Month used based 0 so month 0 = jan
 var year = new Date().getFullYear();
 
 
-var c = new Calendar(month, year);
+console.log(date);
+
+// Display current month
+var c = new Calendar(date, month, year);
 c.ShowDays();
 c.ShowDates();
 
@@ -10,7 +14,7 @@ c.ShowDates();
 document.getElementById('next_month').addEventListener('click', function() {
   c.RemoveDates();
   month++;
-  c = new Calendar(month, year);
+  c = new Calendar(date, month, year);
   c.ShowDates();
 });
 
@@ -18,7 +22,7 @@ document.getElementById('next_month').addEventListener('click', function() {
 document.getElementById('prev_month').addEventListener('click', function() {
   c.RemoveDates();
   month--;
-  c = new Calendar(month, year);
+  c = new Calendar(date, month, year);
   c.ShowDates();
 });
 
@@ -63,4 +67,4 @@ document.getElementById('calendar_body').childNodes[1].addEventListener('click',
       if (event.target == modal) {
           modal.style.display = "none";
       }
-  } 
+  }
